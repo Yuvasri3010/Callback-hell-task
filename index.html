@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CALLBACK HELL</title>
+  <h1><center>Independence Day Countdown Starts!!!</center></h1>
+  <style>
+    body {
+      text-align: center;
+      font-size: 24px;
+      margin: 50px;
+      background-color: black;
+      
+    }
+    h1 {
+        color:blueviolet;
+    
+    }
+#countdown {
+    color: green;
+    font-size: 60px;
+}
+#independenceParagraph {
+    color:goldenrod;
+    
+    
+}
+  </style>
+</head>
+<body>
+    <P id="independenceParagraph"> In 15 August 1947, British colonial rule in India came to an end, concluding almost 200 years of British rule. Since that historic day, 15 August has been celebrated as India's Independence Day. On 15 August 1948, India celebrated the first anniversary of its independence. Thus, this year is the 76th anniversary of freedom.
+On the other hand, if we count from the actual date of Independence - 15 August 1947. This means that 1947 will always be remembered as the first year of India's independence and the first Independence Day. As a result, the country will celebrate its 77th Independence Day in 2023.</P>
+
+<img src ="https://static.toiimg.com/thumb/msid-102697281,width-400,resizemode-4/102697281.jpg" alt="Image of 2023" style="width:300px; height:auto;">
+<div id="countdown"></div>
+
+<script>
+  let seconds = 10;
+
+  function countdown() {
+    const countdownElement = document.getElementById('countdown');
+
+    if (seconds >= 1) {
+      countdownElement.innerHTML = seconds;
+      seconds--;
+      setTimeout(countdown, 1000); // Execute countdown function after 1000 milliseconds (1 second)
+    } else {
+      countdownElement.innerHTML = "Happy Independence Day!";
+      
+    }
+  }
+
+  countdown(); // Start the countdown when the page loads
+</script>
+
+</body>
+</html>
